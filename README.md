@@ -1,0 +1,3 @@
+# About
+
+Custom LunarVim configuration
