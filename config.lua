@@ -1,8 +1,8 @@
-reload('options')
-reload('theme')
-reload('keymaps')
-reload('which_key')
-reload('lsp')
-reload('plugins')
-reload('auto_cmds')
-reload('dashboard')
+require "options"
+require "theme"
+require "keymaps"
+require "which_key"
+require "lsp"
+require "plugins"
+require "auto_cmds"
+require "dashboard"

@@ -47,6 +47,12 @@ local opts = {
 require("lvim.lsp.manager").setup("tsserver", opts)
 -- require("lspconfig")["tsserver"].setup(opts)
 
+-- Typescript code actions
+local null_ls = require "null-ls"
+null_ls.register({
+  require("typescript.extensions.null-ls.code-actions"),
+})
+
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
 -- ---`:LvimInfo` lists which server(s) are skipped for the current filetype
 -- lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)

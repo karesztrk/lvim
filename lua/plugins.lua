@@ -1,6 +1,6 @@
 -- Additional Plugins
 lvim.plugins = {
-  { "karesztrk/nu_disco", requires = { "rktjmp/lush.nvim" } },
+  { "karesztrk/nu_disco",                requires = { "rktjmp/lush.nvim" } },
   {
     "windwp/nvim-ts-autotag",
     config = function()
@@ -29,10 +29,11 @@ lvim.plugins = {
   {
     "codota/tabnine-nvim",
     run = "./dl_binaries.sh"
-  }
+  },
+  { "jose-elias-alvarez/typescript.nvim" },
 }
 
-require('tabnine').setup({
+require("tabnine").setup({
   disable_auto_comment = true,
   accept_keymap = "<A-Enter>",
   dismiss_keymap = "<A-BS>",
