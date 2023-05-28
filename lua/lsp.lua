@@ -18,10 +18,9 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
 
 -- generic LSP settings
-lvim.lsp.diagnostics.virtual_text = false;
+vim.diagnostic.config({ virtual_text = false })
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 lvim.lsp.installer.setup.ensure_installed = {
-  "sumneko_lua",
   "jsonls",
   "tsserver"
 }
@@ -111,3 +110,12 @@ linters.setup {
     command = "eslint_d",
   }
 }
+
+require('tabnine').setup({
+  disable_auto_comment = true,
+  accept_keymap = "<A-Enter>",
+  dismiss_keymap = "<A-BS>",
+  debounce_ms = 800,
+  suggestion_color = { gui = "#808080", cterm = 244 },
+  exclude_filetypes = { "TelescopePrompt" }
+})

@@ -1,9 +1,8 @@
-require "options"
-require "theme"
-require "keymaps"
-require "which_key"
-require "lsp"
-require "plugins"
-require "auto_cmds"
-require "dashboard"
-require "debug"
+require('options')
+require('plugins')
+require('theme')
+require('keymaps')
+require('which-key')
+require('lsp')
+require('dashboard')
+require('debug')
